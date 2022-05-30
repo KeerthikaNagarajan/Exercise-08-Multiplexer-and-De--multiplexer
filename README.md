@@ -47,7 +47,12 @@ If the control input changes to AB = 10, then all the gates are restricted excep
  
  
 ### Procedure
-/* write all the steps invloved */
+1. Start the module using module projname().
+2. Declare the inputs and outputs along with the select lines according to the multiplexer and demultiplexer.
+3. Use wire to assign intermediate outputs.
+4. Use and,or and not gates to get the desired output.
+5. End the module.
+6. Generate RTL realization and timing diagrams.
 
 
 
@@ -75,13 +80,18 @@ endmodule
 
 ```
 ### RTL LOGIC  
-![out](muxcd.png)
+<img width="486" alt="muxcd" src="https://user-images.githubusercontent.com/93427089/170915857-047cc9d9-e5f3-4686-acfc-8fe6268b39a5.png">
 
-### TIMING DIGRAMS  
-![out]()
+### TIMING DIGRAMS
+![I0](https://user-images.githubusercontent.com/93427089/170916110-37470244-88c9-4780-9439-48c3ae1e2fbc.png)
+![I1](https://user-images.githubusercontent.com/93427089/170916114-0ca271fd-6715-48c0-b9a2-9806cd0b6729.png)
+![I2](https://user-images.githubusercontent.com/93427089/170916122-96a173c4-c369-4778-9feb-2799ff2961cc.png)
+![I3](https://user-images.githubusercontent.com/93427089/170916129-d138b267-7202-4851-859a-f47261143802.png)
+
 
 ### TRUTH TABLE 
-![out]()
+![muxtruth](https://user-images.githubusercontent.com/93427089/170916138-779ac9b4-7eb6-4280-9087-38145f96efed.png)
+
 
 ## De-Multiplexer
 ```
@@ -98,17 +108,19 @@ and(Y3,I,S0,S1);
 endmodule
 ```
 ### RTL LOGIC  
-![out](dmuxcd.png)
+<img width="361" alt="dmuxcd" src="https://user-images.githubusercontent.com/93427089/170915834-b5204d8d-04ee-4ac1-9653-b5cf5619b837.png">
 
 ### TIMING DIGRAMS  
-![out]()
+
+![tdmux](https://user-images.githubusercontent.com/93427089/170916156-54596b67-2e15-4556-a185-36e9ffbab182.png)
 
 ### TRUTH TABLE 
-![out]()
+![demuxtruth](https://user-images.githubusercontent.com/93427089/170916163-a3301697-b97a-46bf-b90d-4f61539a0136.png)
+
 
 ### RESULTS 
 
-
+Hence 4x1 Multiplexer and 1x4 Demultiplexer is been implemented and verified using verilog programming and its output are validated.
 
 
 
