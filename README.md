@@ -68,12 +68,13 @@ RegisterNumber: 212221230049
 
 ## Multiplexer
 ```
-module mux(I0,I1,I2,I3,S0,S1,Y);
+module MUX(I0,I1,I2,I3,S0,S1,Y);
 input I0,I1,I2,I3,S0,S1;
 output Y;
+wire S0C,S1C;
 not(S0C,S0);
-nor(S1C,S1);
-wire P,Q,R,S,S0C,S1C;
+not(S1C,S1);
+wire P,Q,R,S;
 and(P,S0C,S1C,I0);
 and(Q,S0C,S1,I1);
 and(R,S0,S1C,I2);
@@ -98,7 +99,7 @@ endmodule
 
 ## De-Multiplexer
 ```
-module dmux(Y0,Y1,Y2,Y3,S0,S1,I);
+module DEMUX(Y0,Y1,Y2,Y3,S0,S1,I);
 input S0,S1,I;
 output Y0,Y1,Y2,Y3;
 wire S0C,S1C;
